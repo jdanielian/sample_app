@@ -15,10 +15,15 @@ let(:base_title) {"Ruby on Rails Tutorial Sample App"}
     	page.should have_selector('h1', :text=> 'Sample App')
     end
 
-	it "should have the title 'Home'" do
+	it "should have the base title " do
 		visit '/static_pages/home'
-		page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Home")
+		page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App")
 	end
+
+	it "should not have custom title" do
+		visit '/static_pages/home'
+		page.should_not have_selector('title', :text => '| Home')
+	end 
 
   end
 
