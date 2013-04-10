@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+
 html { overflow-y: scroll;}
 
 body { padding-top: 60px;}
@@ -10,7 +12,8 @@ textarea { resize: vertical;}
 
 .center { text-align: center;}
 
-.center h1 { margin-bottom: 10px;}
+.center { h1 { margin-bottom: 10px;}
+}
 
 h1,h2,h3,h4,h5,h6 { line-height: 1;}
 
@@ -44,9 +47,24 @@ p { font-size: 1.1em; line-height: 1.7em;}
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+&:hover { color: white; text-decoration: none;}
+
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+ 
+
+footer { margin-top:45px;padding-top:5px;border-top:1px solid $grayMediumLight;
+color: $grayLight;
+  a { 
+   color: $gray;
+   &:hover { color: $grayDarker;} 
+  }
+
+  small {  float:left;}
+ul {
+  float: right;  list-style:none;
+ li { float:left;  margin-left:10px;}
 }
+}
+
+
